@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: taxi
+  name: taxi2
   labels:
-    app.kubernetes.io/name: taxi
+    app.kubernetes.io/name: taxi2
     app.kubernetes.io/version: 0.0.1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: taxi
+      app.kubernetes.io/name: taxi2
       app.kubernetes.io/version: 0.0.1
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: taxi
+        app.kubernetes.io/name: taxi2
         app.kubernetes.io/version: 0.0.1
     spec:
       containers:
-      - name: taxi
+      - name: taxi2
         image: quay.io/kmcdermo/taxi:master
         imagePullPolicy: Always
         volumeMounts:
